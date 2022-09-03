@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="css/main.css" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/icon/apple-touch-icon-180x180.png"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="img/icon/favicon-32x32.ico"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="img/icon/favicon-96x96.png"
+    />
+    <meta
+      name="msapplication-square310x310logo"
+      content="img/icon/mstile-310x310.png"
+    />
+
+    <title>Pünktlichkeitsradar Schweiz</title>
+  </head>
+  <body onload="initPage()">
+    <h2><b>Pünktlichkeitsradar</b></h2>
+    <h4>Pünktlichkeitsinformationen zum Schweizer ÖV</h4>
+    <h5 class="subtitle">Auf Basis der Datenlage vom Vortag</h5>
+
+    <hr />
+
+    <h4>Gesamtpünktlichkeit</h4>
+    <h5 class="subtitle">In Bezug auf Abfahrt in Bahnhöfen und Stationen.</h5>
+    <h1 id="delayedTotalPercentage">Berechne...</h1>
+    <p>
+      Von <span id="maxTrainCount">...</span> waren
+      <span id="delayedTrainCount">...</span> Abfahrten verspätet.
+    </p>
+
+    <hr />
+    <h4>Pünktlichkeit nach Typ</h4>
+    <h5 class="subtitle">
+      Ohne Unterscheidung von Linienbetreibern. <br />
+      In Bezug auf Abfahrtsverspätungen.
+    </h5>
+    <ul>
+      <div class="listItem">EuroCity (EC)</div>
+      <div class="listItem right" id="percentageEC">....</div>
+    </ul>
+    <ul>
+      <div class="listItem">InterCity (IC)</div>
+      <div class="listItem right" id="percentageIC">....</div>
+    </ul>
+    <ul>
+      <div class="listItem">InterCityExpress (ICE)</div>
+      <div class="listItem right" id="percentageICE">....</div>
+    </ul>
+    <ul>
+      <div class="listItem">InterRegio (IR)</div>
+      <div class="listItem right" id="percentageIR">....</div>
+    </ul>
+
+    <ul>
+      <div class="listItem">Regio (R)</div>
+      <div class="listItem right" id="percentageR">....</div>
+    </ul>
+
+    <ul>
+      <div class="listItem">RegioExpress (RE)</div>
+      <div class="listItem right" id="percentageRE">....</div>
+    </ul>
+
+    <br /><br /><br />
+    <div class="footer">
+      <p>
+        Daten: OpenData Plattform öV Schweiz | Angaben ohne Gewähr &nbsp;&nbsp;
+      </p>
+      <p onclick="mail()">Entwickler kontaktieren &nbsp;&nbsp;</p>
+    </div>
+  </body>
+</html>
